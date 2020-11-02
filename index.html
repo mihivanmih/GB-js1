@@ -9,6 +9,148 @@
 </head>
 <body>
 
+1.
+var a = 1, b = 1, c, d; <br>
+c = ++a; alert(c); // 2 <strong>Потому что а + 1</strong><br>
+d = b++; alert(d); // 1 <strong>Потому что b + 1</strong><br>
+c = (2+ ++a); alert(c); // 5 <strong>Потому что a тут равно 3</strong><br>
+d = (2+ b++); alert(d); // 4 <strong>Потому что b тут равно 2</strong><br>
+alert(a); // 3 <strong>Потому что к а 2 раза прибавили 1</strong><br>
+alert(b); // 3 <strong>Потому что к b 2 раза прибавили 1</strong><br>
+
+<br/><br/>
+2.
+<strong>5</strong>
+
+<br/><br/>
+
+<button onclick="lesson3()">Задание 3</button>
+
+<br/><br/>
+<button onclick="switchfunc()">Задание 4</button>
+
+<br/><br/>
+<button onclick="arithmetics()">Задание 5</button>
+
+<br/><br/>
+<button onclick="mathOperationPromt()">Задание 6</button>
+
+<br/><br/>
+7. false <strong>null не равен 0</strong>
+
+<br/><br/>
+
+<button onclick="powerPromt()">Задание 8</button>
+
+<script>
+
+    function lesson3() {
+
+        let a = Number(prompt("Введите 1 число"))
+        let b = Number(prompt("Введите 2 число"))
+
+        if(a >= 0 && b >= 0){
+            if(a>b){
+                alert(a-b)
+            }else{
+                alert(b-a)
+            }
+        } else if (a < 0 && b < 0) {
+            alert(a*b)
+        }else {
+            alert(a+b)
+        }
+    }
+
+
+    function switchfunc () {
+
+        let a = Number(prompt("Введите число от 0 до 15"))
+
+        switch (a) {
+            case 0: alert(1);
+            case 1: alert(2)
+            case 2: alert(3)
+            case 3: alert(4)
+            case 4: alert(5)
+            case 5: alert(6)
+            case 6: alert(7)
+            case 7: alert(8)
+            case 8: alert(9)
+            case 9: alert(10)
+            case 10: alert(11)
+            case 11: alert(12)
+            case 12: alert(13);
+            case 13: alert(14);
+            case 14: alert(15);
+                break
+            case 15: alert(15)
+        }
+    }
+
+
+    function arithmetics() {
+        let a = prompt("Введите 1 число")
+        let b = prompt("Введите 2 число")
+        return  arithmetic(a, b)
+    }
+
+    function arithmetic(a, b) {
+        let sum = Number(a) + Number(b);
+        let subtraction = a - b;
+        let multiplication = a * b;
+        let division = a / b;
+        return alert("сложение " + sum + "\n вычитание " + subtraction + "\n умножение  " + multiplication + "\n деление " + division);
+    }
+
+   function mathOperationPromt() {
+        let arg1 = prompt("Введите 1 число")
+        let arg2 = prompt("Введите 2 число")
+        let operation = prompt("Введите одну из операций: умножить, делить, сложить, отнять")
+        return mathOperation(arg1, arg2, operation)
+    }
+
+    function mathOperation(arg1, arg2, operation) {
+
+        switch (operation) {
+            case "умножить":
+                let multiplication = arg1 * arg2;
+                return alert(multiplication);
+            case "делить":
+                let division = arg1 / arg2;
+                return alert(division);
+            case "сложить":
+                let sum = Number(arg1) + Number(arg2);
+                return alert(sum);
+            case "отнять":
+                let subtraction = arg1 - arg2;
+                return alert(subtraction);
+        }
+    }
+
+    function powerPromt() {
+        let val = prompt("Введите число")
+        let pow= prompt("Введите степень")
+        return  power(val,pow)
+    }
+
+    function power(val, pow, stage=val) {
+       stage = stage;
+       val = val * stage;
+       pow--;
+
+        if(pow==1) {
+            alert(val)
+        }
+        power(val, pow, stage);
+    }
+
+
+
+
+</script>
+
+
 
 
 </body>
