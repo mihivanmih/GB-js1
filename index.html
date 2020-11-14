@@ -5,9 +5,29 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lesson 1</title>
+    <title>Lesson 2</title>
 </head>
 <body>
+<style>
+    .menu {
+        width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 50px;
+    }
+    .menu a {
+        color: #0bafff;
+        padding: 0 10px;
+        text-decoration: none;
+    }
+    .menu a:hover {
+        text-decoration: underline;
+    }
+</style>
+<div class="menu" id="myhtml">
+    <a href="index.html">Задание 2</a>
+    <a href="lesson4.html">Задание 4</a>
+</div>
 
 1.
 var a = 1, b = 1, c, d; <br>
@@ -17,6 +37,21 @@ c = (2+ ++a); alert(c); // 5 <strong>Потому что a тут равно 3</
 d = (2+ b++); alert(d); // 4 <strong>Потому что b тут равно 2</strong><br>
 alert(a); // 3 <strong>Потому что к а 2 раза прибавили 1</strong><br>
 alert(b); // 3 <strong>Потому что к b 2 раза прибавили 1</strong><br>
+
+
+<script>
+var a = 1, b = 1, c, d;
+c = ++a;       // 2
+d = b++;  
+
+       // 1
+c = (2+ ++a); 
+      // 5
+	  console.log(".ss"+b);
+d = (2+ b++);     // 4
+                 // 3
+</script>
+
 
 <br/><br/>
 2.
