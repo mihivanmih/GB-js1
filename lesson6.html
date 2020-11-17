@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/lesson6.css">
+    <title>Урок 6</title>
+</head>
+<body>
+
+<style>
+    .menu {
+        width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 50px;
+    }
+
+    .menu a {
+        color: #0bafff;
+        padding: 0 10px;
+        text-decoration: none;
+    }
+
+    .menu a:hover {
+        text-decoration: underline;
+    }
+</style>
+<div class="menu" id="myhtml">
+    <a href="index.html">Задание 2</a>
+    <a href="lesson4.html">Задание 4</a>
+    <a href="lesson5.html">Задание 5</a>
+    <a href="lesson6.html">Задание 6</a>
+</div>
+
+<strong>Задание: </strong> <br><br>
+
+1. Доработать функцию замены картинки в галерее таким образом, чтобы она проверяла наличие картинки по указанному в
+src адресу. <br><br>
+2. Реализовать модуль корзины. Создать блок товаров и блок корзины. У каждого товара есть кнопка «Купить», при
+нажатии на которую происходит добавление имени и цены товара в блок корзины. Корзина должна уметь считать общую
+сумму заказа. <br><br>
+3. *Добавить в галерею функцию перехода к следующему изображению. По сторонам от большой картинки должны быть
+стрелки «вперед» и «назад», по нажатию на которые происходит замена изображения на следующее или предыдущее. <br><br>
+
+
+<div class="items">
+    <div class="item" id="item1">
+        <div class="img">Картинка</div>
+        <div class="text">Товар 1</div>
+        <div class="price">2500</div>
+        <div class="buy" onclick="buy('1')"><button>Купить</button></div>
+    </div>
+    <div class="item" id="item2">
+        <div class="img">Картинка</div>
+        <div class="text">Товар 2</div>
+        <div class="price">5000</div>
+        <div class="buy" onclick="buy('2')"><button>Купить</button></div>
+    </div>
+    <div class="item" id="item3">
+        <div class="img">Картинка</div>
+        <div class="text">Товар 3</div>
+        <div class="price">500</div>
+        <div class="buy" onclick="buy('3')"><button>Купить</button></div>
+    </div>
+</div>
+
+<div class="order">
+    Корзина:
+    <div id="basketNull">Ваша корзина пуста</div>
+    <div class="basket" id="basket"></div>
+</div>
+<div id="bascetAll">Сумма: <span>0</span></div>
+
+
+<main>
+
+    <div class="full-picture">
+        <div class="left none" id="left" onclick="leftslide()"><=</div>
+        <div class="right none" id="right" onclick="Rightslide()">=></div>
+    </div>
+    <div class="preview" id="preview">
+        <img onclick="" id="img0" onload="Imgtrue(true, src)" onerror="Imgtrue(false, src)" data-id="0" class="preview-item" src="https://images.unsplash.com/photo-1605296830714-7c02e14957ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="PS5">
+        <img onclick="" id="img1" onload="Imgtrue(true, src)" onerror="Imgtrue(false, src)" data-id="1" class="preview-item" src="https://images.unsplash.com/photo-1605291952089-adcb85d4dcbd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="road">
+        <img onclick="" id="img2" onload="Imgtrue(true, src)" onerror="Imgtrue(false, src)" data-id="2" class="preview-item" src="https://images.unsplash.com/photo-1605325811474-ba58cf3180d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="palm">
+        <img onclick="" id="img3" onload="Imgtrue(true, src)" onerror="Imgtrue(false, src)" data-id="3" class="preview-item" src="https://img.gazeta.ru/files3/501/6199501/upload-01-pic4_zoom-1000x1000-95049.jpg" alt="PS5">
+        <img onclick="" id="img4" onload="Imgtrue(true, src)" onerror="Imgtrue(false, src)" data-id="4" class="preview-item" src="https://static9.depositphotos.com/1594308/1158/i/600/depositphotos_11583757-stock-photo-goose.jpg" alt="road">
+        <img onclick="" id="img5" onload="Imgtrue(true, src)" onerror="Imgtrue(false, src)" data-id="5" class="preview-item" src="https://shkolazhizni.ru/img/content/i116/116677_big.jpg" alt="palm">
+        <!--
+                <img onclick="" onload="Imgtrue(true, src)" onerror="Imgtrue(false, src)" class="preview-item" src="https://dsfsd" alt="не картинка">
+        -->
+    </div>
+
+</main>
+
+<script src="js/lesson6.js"></script>
+
+</body>
+</html>

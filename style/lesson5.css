@@ -1,0 +1,114 @@
+.chess {
+    display: flex;
+    flex-wrap: wrap;
+    width: 452px;
+    background: aqua;
+    margin: 50px auto;
+}
+
+.black {
+    width: 50px;
+    height: 50px;
+    background: rgba(0,0,0, 0.5);
+    color: white;
+    line-height: 50px;
+    text-align: center;
+}
+
+.white {
+    width: 50px;
+    height: 50px;
+    background: white;
+    line-height: 50px;
+    text-align: center;
+}
+
+.clear {
+    clear: both;
+    width: 100%;
+}
+
+.none {
+    background: #fff;
+    text-align: center;
+    color: black;
+    line-height: 50px;
+}
+
+.border-right {
+    border-right: 1px solid #000;
+}
+
+.border-top {
+    border-top: 1px solid #000;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #000;
+}
+
+.border-bottom-none {
+    border-bottom: 1px solid #fff;
+}
+
+.border-a8 {
+    border-right: 2px solid #fff;
+}
+
+.border-top-none {
+    border-top: 1px solid #fff;
+}
+
+.pawn_black {
+    background: url("../chess.png") -459px 0 no-repeat;
+}
+
+.pawn_white {
+    background: url("../chess.png") -459px -80px no-repeat;
+}
+
+.lad_black {
+    background: url("../chess.png") -183px 0 no-repeat;
+}
+
+.lad_white {
+    background: url("../chess.png") -183px -80px no-repeat;
+}
+
+.kon_black {
+    background: url("../chess.png") -367px 0 no-repeat;
+}
+
+.kon_white {
+    background: url("../chess.png") -367px -80px no-repeat;
+}
+
+.slo_black {
+    background: url("../chess.png") -275px 0 no-repeat;
+}
+
+.slo_white {
+    background: url("../chess.png") -275px -80px no-repeat;
+}
+
+.fer_black {
+    background: url("../chess.png") -89px 0 no-repeat;
+}
+
+.fer_white {
+    background: url("../chess.png") -89px -80px no-repeat;
+}
+
+.kor_black {
+    background: url("../chess.png") 3px 0 no-repeat;
+}
+
+.kor_white {
+    background: url("../chess.png") 3px -80px no-repeat;
+}
+
+.figure {
+    width: 50px;
+    height: 50px;
+    background-size: 500px;
+}
